@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ./AmlImg unpack ./uboot.img burn/
-gunzip openwrt/bin/targets/*/*/*.gz
+gzip -dk openwrt/bin/targets/*/*/*.gz
 
 # 定义变量以增加代码的可读性和可维护性
 diskimg_path="openwrt/bin/targets/*/*/*.img"
@@ -73,4 +73,5 @@ printf "PARTITION:boot:sparse:boot.simg\nPARTITION:rootfs:sparse:rootfs.simg\n" 
 sha256sum "${burnimg_name}" > "${burnimg_name}.sha"
 xz -9 --threads=0 --compress "${burnimg_name}"
 rm -rf burn
+rm ${diskimg_path}
 echo "Script execution completed."
