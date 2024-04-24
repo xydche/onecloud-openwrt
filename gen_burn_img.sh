@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo apt install img2simg
 ./AmlImg unpack ./uboot.img burn/
 gzip -dk openwrt/bin/targets/*/*/*.gz
 
