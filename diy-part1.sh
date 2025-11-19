@@ -20,5 +20,5 @@ sed -i '2s/^#//' feeds.conf.default
 sed -i '3s/^/#/' feeds.conf.default
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 
-git clone -b lua https://github.com/sbwml/luci-app-alist package/alist
+# git clone -b lua https://github.com/sbwml/luci-app-alist package/alist
 # git clone https://github.com/rufengsuixing/luci-app-onliner package/onliner
